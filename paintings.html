@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Paintings | Art by Justyna</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .icon {
+            color: rgb(70, 70, 70);
+            font-size: 50px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .icon:hover {
+            color: #1dd6ee;
+            transform: scale(1.2);
+        }
+
+        .caption {
+            font-size: 25px;
+            color: #333;
+        }
+        
+        .caption .material {
+            font-size: 16px;
+            color: #888;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* Lupa */
+        .modal-content {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zoom-lens {
+            position: absolute;
+            border: 3px solid #000;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: none;
+            cursor: zoom-in;
+            pointer-events: none;
+        }
+
+        .modal-content:hover .zoom-lens {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home icon"></i></a></li>
+                    <li><a href="about.html"><i class="fas fa-user icon"></i></a></li>
+                    <li><a href="paintings.html"><i class="fas fa-paint-brush icon"></i></a></li>
+                    <li><a href="instagram.html"><i class="fab fa-instagram icon"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="paintings">
+            <h1>My Paintings</h1>
+            <p>Explore my collection of paintings.</p>
+            <div class="images">
+                <div><img src="images/1.jpg" alt="1" data-info="Cesta za cílem" data-material="Akryl"></div>
+                <div><img src="images/2.jpg" alt="2" data-info="Bouře" data-material="Akryl"></div>
+                <div><img src="images/3.jpg" alt="3" data-info="Dvojíživot" data-material="Akryl"></div>
+                <div><img src="images/4.jpg" alt="4" data-info="Samota" data-material="Akryl"></div>
+                <div><img src="images/5.jpg" alt="5" data-info="Světlo domova" data-material="Akryl"></div>
+                <div><img src="images/6.jpg" alt="6" data-info="Úpad" data-material="Akryl 2D sádra"></div>
+                <div><img src="images/7.jpg" alt="7" data-info="Delta" data-material="Akryl"></div>
+                <div><img src="images/8.jpg" alt="8" data-info="Cesta k tichu" data-material="Akryl"></div>
+                <div><img src="images/9.jpg" alt="9" data-info="Na okraji" data-material="Akryl"></div>
+                <div><img src="images/10.jpg" alt="10" data-info="Chlad" data-material="Akryl"></div>
+                <div><img src="images/11.jpg" alt="11" data-info="Zrcadlo" data-material="Akryl"></div>
+                <div><img src="images/12.jpg" alt="12" data-info="Útes" data-material="Akryl"></div>
+                <div><img src="images/13.jpg" alt="13" data-info="Dovolená" data-material="Akryl"></div>
+                <div><img src="images/14.jpg" alt="14" data-info="Odraz" data-material="Akryl"></div>
+                <div><img src="images/15.jpg" alt="15" data-info="Budoucnost" data-material="Akryl"></div>
+            <p>Disclaimer: The paintings are not equipped with frames</p>
+        </section>
+    </main>
+    
+    <div id="myModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" alt="Expanded Image">
+            <div id="modalInfo" class="caption">
+                <span id="modalTitle"></span>
+                <span id="modalMaterial" class="material"></span>
+            </div>
+            <div class="zoom-lens"></div> <!-- Přidána lupa -->
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+    <footer style="text-align: center; margin-top: 50px;">
+        <p>Made by Matěj Teplý</p>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Dynamicky nastaví aktuální rok
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>    
+</body>
+</html>
