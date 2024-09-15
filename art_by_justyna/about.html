@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Art by Justyna</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        .icon {
+            color: rgb(70, 70, 70);
+            font-size: 50px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .icon:hover {
+            color: #1dd6ee;
+            transform: scale(1.2);
+        }
+        #map {
+            height: 400px; /* Výška mapy */
+            width: 100%; /* Šířka mapy */
+            border: 1px solid #ddd; /* Volitelný okraj */
+            border-radius: 8px; /* Volitelný zaoblený okraj */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home icon"></i></a></li>
+                    <li><a href="about.html"><i class="fas fa-user icon"></i></a></li>
+                    <li><a href="paintings.html"><i class="fas fa-paint-brush icon"></i></a></li>
+                    <li><a href="instagram.html"><i class="fab fa-instagram icon"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="about">
+            <h1>About Me</h1>
+            <p>My name is Justýna, I am 18 years old, and art represents one of the most important ways for me to express my emotions, thoughts, and unique perspective on the world. I am most inspired by nature, especially the sea, waves, and trees, whose ever-changing forms never cease to fascinate me – something you can notice in my paintings.</p>
+            <p>Painting is not only a passion for me, but also a form of relaxation and therapy. When I immerse myself in the creative process, I leave all worries behind and focus entirely on colors, shapes, and composition. Painting relieves my stress and brings me inner peace.</p>
+            <p>In addition to art, I am a student studying social sciences at high school, which often reflects in my work. I also draw inspiration from the nature surrounding my home in Březnice near Zlín, which surrounds me every day and motivates me to come up with new creative ideas.</p>
+            <p>For me, art is not only a means of self-expression but also an inexhaustible source of joy and inner fulfillment.</p>
+
+            <!-- Map container -->
+            
+            <div id="map"></div>
+        </section>
+    </main>
+    <script>
+        const map = L.map('map').setView([49.18498391384769, 17.65662610674593], 13); // Set the view with a zoom level
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([49.18498391384769, 17.65662610674593]).addTo(map)
+            .bindPopup('Březnice')
+            .openPopup();
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

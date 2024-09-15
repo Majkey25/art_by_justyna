@@ -1,0 +1,173 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;    
+    background-image: url('../images/background2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Upravený horní banner */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 20px auto;
+    width: calc(100% - 40px); /* Dynamická šířka pro lepší responzivitu */
+    max-width: 1200px; /* Zamezí přesahování na větších obrazovkách */
+    padding: 0 20px;
+}
+
+header .nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Upravené ikony navigace */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px; /* Upravená mezera mezi ikonami */
+}
+
+/* Styl pro jednotlivé položky v navigaci */
+nav ul li {
+    margin: 0;
+    position: relative;
+}
+
+nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Sekce a hero */
+.hero, section {
+    text-align: center;
+    padding: 60px 20px;
+    margin: 80px auto;
+    max-width: 80%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+/* Obrázky v sekci */
+.pimages {
+    text-align: center;
+    padding: 60px 20px;
+    margin: 80px auto;
+    max-width: 80%;
+}
+
+/* Mřížka obrázků */
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tři sloupce */
+    gap: 20px; /* Mezery mezi obrázky */
+}
+
+.images img {
+    width: 100%; /* Obrázky se přizpůsobí šířce sloupce */
+    height: auto; /* Výška se přizpůsobí poměru stran obrázku */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.05); /* Zvětšení obrázku při najetí myší */
+}
+
+/* Modální okno */
+.modal {
+    display: none; /* Skryté, dokud není otevřeno */
+    position: fixed;
+    z-index: 1000; /* Ujisti se, že je nad ostatními prvky */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex; /* Flexbox pro centrování */
+    justify-content: center; /* Horizontální centrování */
+    align-items: center; /* Vertikální centrování */
+    background-color: rgba(0, 0, 0, 0.8); /* Poloprůhledné pozadí */
+}
+
+/* Obsah modálního okna */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* Obrázek v modálním okně */
+.modal-content img {
+    max-width: 90%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Informace pod obrázkem */
+.caption {
+    margin-top: 15px;
+    font-size: 25px;
+    color: #333;
+}
+
+/* Zavírací tlačítko */
+.close {
+    color: #aaa;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responzivní úpravy pro mobily */
+@media (max-width: 768px) {
+    header {
+        width: 90%; /* Zmenšíme šířku banneru na mobilu */
+    }
+
+    nav ul {
+        gap: 20px; /* Zmenšíme mezery mezi ikonami na mobilu */
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        flex: 1; /* Ikony budou rovnoměrně rozprostřeny na celou šířku */
+    }
+}
