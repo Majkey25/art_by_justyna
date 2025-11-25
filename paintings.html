@@ -5,55 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Paintings | Art by Justyna</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="icon-512x512.png" type="image/png">
-
-    <style>
-        .icon {
-            color: rgb(70, 70, 70);
-            font-size: 50px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-        .icon:hover {
-            color: #1dd6ee;
-            transform: scale(1.2);
-        }
-
-        .caption {
-            font-size: 25px;
-            color: #333;
-        }
-        
-        .caption .material {
-            font-size: 16px;
-            color: #888;
-            display: block;
-            margin-top: 5px;
-        }
-
-        /* Lupa */
-        .modal-content {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .zoom-lens {
-            position: absolute;
-            border: 3px solid #000;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            display: none;
-            cursor: zoom-in;
-            pointer-events: none;
-        }
-
-        .modal-content:hover .zoom-lens {
-            display: block;
-        }
-    </style>
 </head>
-<body>
+<body class="paintings-page">
     <header>
         <div class="nav-wrapper">
             <nav>
@@ -66,32 +22,67 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main class="page-shell">
         <section class="paintings">
-            <h1>My Paintings</h1>
-            <p>Explore my collection of paintings.</p>
+            <div class="section-heading">
+                <p class="eyebrow">Gallery</p>
+                <h1>My Paintings</h1>
+                <p class="lede">Tap any piece to open a glassy lightbox with zoom.</p>
+            </div>
             <div class="images">
-                <div><img src="images/1.jpg" alt="1" data-info="Cesta za cílem" data-material="Akryl"></div>
-                <div><img src="images/2.jpg" alt="2" data-info="Bouře" data-material="Akryl"></div>
-                <div><img src="images/3.jpg" alt="3" data-info="Dvojíživot" data-material="Akryl"></div>
-                <div><img src="images/4.jpg" alt="4" data-info="Samota" data-material="Akryl"></div>
-                <div><img src="images/5.jpg" alt="5" data-info="Světlo domova" data-material="Akryl"></div>
-                <div><img src="images/6.jpg" alt="6" data-info="Úpad" data-material="Akryl 2D sádra"></div>
-                <div><img src="images/7.jpg" alt="7" data-info="Delta" data-material="Akryl"></div>
-                <div><img src="images/8.jpg" alt="8" data-info="Cesta k tichu" data-material="Akryl"></div>
-                <div><img src="images/9.jpg" alt="9" data-info="Na okraji" data-material="Akryl"></div>
-                <div><img src="images/10.jpg" alt="10" data-info="Chlad" data-material="Akryl"></div>
-                <div><img src="images/16.jpg" alt="15" data-info="Radost" data-material="Akryl"></div>
-                <div><img src="images/11.jpg" alt="11" data-info="Zrcadlo" data-material="Akryl"></div>
-                <div><img src="images/12.jpg" alt="12" data-info="Útes" data-material="Akryl"></div>
-                <div><img src="images/13.jpg" alt="13" data-info="Dovolená" data-material="Akryl"></div>
-                <div><img src="images/14.jpg" alt="14" data-info="Odraz" data-material="Akryl"></div>
-                <div><img src="images/15.jpg" alt="15" data-info="Budoucnost" data-material="Akryl"></div>
-                
-            <p>Disclaimer: The paintings are not equipped with frames</p>
+                <div class="painting-card" data-title="Cesta za cilem" data-material="Akryl">
+                    <img src="images/1.jpg" alt="Cesta za cilem">
+                </div>
+                <div class="painting-card" data-title="Boure" data-material="Akryl">
+                    <img src="images/2.jpg" alt="Boure">
+                </div>
+                <div class="painting-card" data-title="Dvoji zivot" data-material="Akryl">
+                    <img src="images/3.jpg" alt="Dvoji zivot">
+                </div>
+                <div class="painting-card" data-title="Samota" data-material="Akryl">
+                    <img src="images/4.jpg" alt="Samota">
+                </div>
+                <div class="painting-card" data-title="Svetlo domova" data-material="Akryl">
+                    <img src="images/5.jpg" alt="Svetlo domova">
+                </div>
+                <div class="painting-card" data-title="Zapad" data-material="Akryl 2D sadra">
+                    <img src="images/6.jpg" alt="Zapad">
+                </div>
+                <div class="painting-card" data-title="Delta" data-material="Akryl">
+                    <img src="images/7.jpg" alt="Delta">
+                </div>
+                <div class="painting-card" data-title="Cesta k tichu" data-material="Akryl">
+                    <img src="images/8.jpg" alt="Cesta k tichu">
+                </div>
+                <div class="painting-card" data-title="Na okraji" data-material="Akryl">
+                    <img src="images/9.jpg" alt="Na okraji">
+                </div>
+                <div class="painting-card" data-title="Chlad" data-material="Akryl">
+                    <img src="images/10.jpg" alt="Chlad">
+                </div>
+                <div class="painting-card" data-title="Radost" data-material="Akryl">
+                    <img src="images/16.jpg" alt="Radost">
+                </div>
+                <div class="painting-card" data-title="Zrcadlo" data-material="Akryl">
+                    <img src="images/11.jpg" alt="Zrcadlo">
+                </div>
+                <div class="painting-card" data-title="Utes" data-material="Akryl">
+                    <img src="images/12.jpg" alt="Utes">
+                </div>
+                <div class="painting-card" data-title="Dovolena" data-material="Akryl">
+                    <img src="images/13.jpg" alt="Dovolena">
+                </div>
+                <div class="painting-card" data-title="Odraz" data-material="Akryl">
+                    <img src="images/14.jpg" alt="Odraz">
+                </div>
+                <div class="painting-card" data-title="Budoucnost" data-material="Akryl">
+                    <img src="images/15.jpg" alt="Budoucnost">
+                </div>
+            </div>
+            <p class="disclaimer">Disclaimer: paintings are not framed.</p>
         </section>
     </main>
-    
+
     <div id="myModal" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -100,21 +91,20 @@
                 <span id="modalTitle"></span>
                 <span id="modalMaterial" class="material"></span>
             </div>
-            <div class="zoom-lens"></div> <!-- Přidána lupa -->
+            <div class="zoom-lens"></div>
         </div>
     </div>
-    
+
     <script src="js/script.js"></script>
-   
-    <footer style="display: flex; justify-content: center; align-items: center; text-align: center;">
-        <a href="https://majkey25.github.io/My-website-for-fun/" style="text-decoration: none; color: inherit;">
-            <p style="margin: 1;">Made by Matěj Teplý &copy; <span id="year"></span> All rights reserved.</p>
+
+    <footer class="site-footer">
+        <a href="https://majkey25.github.io/My-website-for-fun/" class="footer-link">
+            <p>Made by Matej Teply &copy; <span id="year"></span> All rights reserved.</p>
         </a>
     </footer>
-    
+
     <script>
-        // Dynamicky nastaví aktuální rok
         document.getElementById("year").textContent = new Date().getFullYear();
-    </script>    
+    </script>
 </body>
 </html>
