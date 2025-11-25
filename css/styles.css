@@ -5,10 +5,10 @@
 :root {
     --bg: #0c1020;
     --bg-2: #0f172a;
-    --glass: rgba(255, 255, 255, 0.06);
-    --stroke: rgba(255, 255, 255, 0.14);
-    --text: #e9eef6;
-    --muted: #a4b7d4;
+    --glass: rgba(255, 255, 255, 0.15);
+    --stroke: rgba(255, 255, 255, 0.25);
+    --text: #ffffff;
+    --muted: #d1e0f0;
     --accent: #7de7ff;
     --accent-2: #f3b0ff;
     --shadow: 0 18px 60px rgba(4, 8, 20, 0.5);
