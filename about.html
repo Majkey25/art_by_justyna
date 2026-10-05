@@ -5,28 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Art by Justyna</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="icon" href="icon-512x512.png" type="image/png">
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <style>
-        #map {
-            height: 400px; /* Výška mapy */
-            width: 100%; /* Šířka mapy */
-            border: 1px solid var(--stroke); /* Volitelný okraj */
-            border-radius: 8px; /* Volitelný zaoblený okraj */
-        }
-    </style>
 </head>
 <body>
     <header>
         <div class="nav-wrapper">
             <nav>
                 <ul>
-                    <li><a href="index.html"><i class="fas fa-home icon"></i></a></li>
-                    <li><a href="about.html"><i class="fas fa-user icon"></i></a></li>
-                    <li><a href="paintings.html"><i class="fas fa-paint-brush icon"></i></a></li>
-                    <li><a href="instagram.html"><i class="fab fa-instagram icon"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="paintings.html">Paintings</a></li>
+                    <li><a href="instagram.html">Instagram</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,27 +28,21 @@
             <p>In addition to art, I am a student studying social sciences at high school, which often reflects in my work. I also draw inspiration from the nature surrounding my home in Březnice near Zlín, which surrounds me every day and motivates me to come up with new creative ideas.</p>
             <p>For me, art is not only a means of self-expression but also an inexhaustible source of joy and inner fulfillment.</p>
 
-            <!-- Map container -->
-            
-            <div id="map"></div>
+            <p><a href="https://www.openstreetmap.org/#map=13/49.1850/17.6566" rel="noreferrer">View Březnice on OpenStreetMap</a>. The map opens on an external website.</p>
+        </section>
+        <section id="privacy" aria-labelledby="privacy-title">
+            <h2 id="privacy-title">Website privacy</h2>
+            <p>This portfolio has no contact form, accounts, checkout, analytics, advertising cookies, or browser storage. Images and styles load from this site. Instagram and maps open only when you follow an external link.</p>
+            <p>GitHub Pages hosts this site and receives technical request data, including your IP address. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>. Instagram and OpenStreetMap have their own privacy practices once you visit them.</p>
+            <p>For questions about artwork or personal data you have shared with the artist, including access, correction, or deletion requests, use the existing <a href="https://www.instagram.com/art_by_justyna/" rel="noreferrer">Art by Justyna Instagram contact</a>. Include only information needed for your enquiry.</p>
         </section>
     </main>
-    <script>
-        const map = L.map('map').setView([49.18498391384769, 17.65662610674593], 13); // Set the view with a zoom level
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([49.18498391384769, 17.65662610674593]).addTo(map)
-            .bindPopup('Březnice')
-            .openPopup();
-    </script>
     <script src="js/script.js"></script>
     
-    <footer style="display: flex; justify-content: center; align-items: center; text-align: center;">
-        <a href="https://majkey25.github.io/My-website-for-fun/" style="text-decoration: none; color: inherit;">
-            <p style="margin: 1;">Made by Matěj Teplý &copy; <span id="year"></span> All rights reserved.</p>
+    <footer class="site-footer">
+        <p><a href="#privacy">Website privacy</a></p>
+        <a href="https://majkey25.github.io/init/" style="text-decoration: none; color: inherit;">
+            <p>Website by Matěj Teplý · <span id="year"></span></p>
         </a>
     </footer>
     
