@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Paintings | Art by Justyna</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="icon-512x512.png" type="image/png">
 </head>
 <body class="paintings-page">
@@ -14,10 +12,10 @@
         <div class="nav-wrapper">
             <nav>
                 <ul>
-                    <li><a href="index.html"><i class="fas fa-home icon"></i></a></li>
-                    <li><a href="about.html"><i class="fas fa-user icon"></i></a></li>
-                    <li><a href="paintings.html"><i class="fas fa-paint-brush icon"></i></a></li>
-                    <li><a href="instagram.html"><i class="fab fa-instagram icon"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="paintings.html">Paintings</a></li>
+                    <li><a href="instagram.html">Instagram</a></li>
                 </ul>
             </nav>
         </div>
@@ -83,9 +81,9 @@
         </section>
     </main>
 
-    <div id="myModal" class="modal" style="display: none;">
+    <dialog id="myModal" class="modal" aria-labelledby="modalTitle">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <button class="close" type="button" aria-label="Close painting">&times;</button>
             <img id="modalImage" alt="Expanded Image">
             <div id="modalInfo" class="caption">
                 <span id="modalTitle"></span>
@@ -93,13 +91,14 @@
             </div>
             <div class="zoom-lens"></div>
         </div>
-    </div>
+    </dialog>
 
     <script src="js/script.js"></script>
 
     <footer class="site-footer">
-        <a href="https://majkey25.github.io/My-website-for-fun/" class="footer-link">
-            <p>Made by Matej Teply &copy; <span id="year"></span> All rights reserved.</p>
+        <p><a href="about.html#privacy">Website privacy</a></p>
+        <a href="https://majkey25.github.io/init/" class="footer-link">
+            <p>Website by Matěj Teplý · <span id="year"></span></p>
         </a>
     </footer>
 

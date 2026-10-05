@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Art by Justyna</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="icon-512x512.png" type="image/png">
     <style>
         /* Styl tlačítka Learn More */
@@ -13,7 +12,7 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #489ef9;
+            background-color: #1761a8;
             color: white;
             text-align: center;
             text-decoration: none;
@@ -22,7 +21,7 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .learn-more:hover {
-            background-color: #1dd6ee;
+            background-color: #12558f;
             transform: scale(1.05);
         }
 
@@ -52,7 +51,7 @@
 
         /* Větší font nadpisu */
         .hero-title h1 {
-            font-size: 4rem; /* Adjust this value for size */
+            font-size: clamp(2rem, 9vw, 4rem);
         }
 
         /* Text pod obrázkem */
@@ -67,10 +66,10 @@
         <div class="nav-wrapper">
             <nav>
                 <ul>
-                    <li><a href="index.html"><i class="fas fa-home icon"></i></a></li>
-                    <li><a href="about.html"><i class="fas fa-user icon"></i></a></li>
-                    <li><a href="paintings.html"><i class="fas fa-paint-brush icon"></i></a></li>
-                    <li><a href="instagram.html"><i class="fab fa-instagram icon"></i></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="paintings.html">Paintings</a></li>
+                    <li><a href="instagram.html">Instagram</a></li>
                 </ul>
             </nav>
         </div>
@@ -94,9 +93,10 @@
     </main>
     <script src="js/script.js"></script>
    
-    <footer style="display: flex; justify-content: center; align-items: center; text-align: center;">
-        <a href="https://majkey25.github.io/My-website-for-fun/" style="text-decoration: none; color: inherit;">
-            <p style="margin: 1;">Made by Matěj Teplý &copy; <span id="year"></span> All rights reserved.</p>
+    <footer class="site-footer">
+        <p><a href="about.html#privacy">Website privacy</a></p>
+        <a href="https://majkey25.github.io/init/" style="text-decoration: none; color: inherit;">
+            <p>Website by Matěj Teplý · <span id="year"></span></p>
         </a>
     </footer>
     

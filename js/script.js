@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showModal(imageElement?.src || '', titleText, materialText);
         });
 
-        card.addEventListener('keypress', (event) => {
+        card.addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
                 showModal(imageElement?.src || '', titleText, materialText);
@@ -42,23 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function showModal(imageSrc, titleText, materialText) {
-        modalElement.style.display = 'flex';
         modalImageElement.src = imageSrc;
+        modalImageElement.alt = titleText;
         modalTitleElement.textContent = titleText;
         modalMaterialElement.textContent = materialText;
+        modalElement.showModal();
     }
 
     function hideModal() {
-        modalElement.style.display = 'none';
+        modalElement.close();
+        zoomLensElement.style.display = 'none';
     }
 
     closeButtonElement?.addEventListener('click', hideModal);
-
-    window.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            hideModal();
-        }
-    });
 
     window.addEventListener('click', (event) => {
         if (event.target === modalElement) {
