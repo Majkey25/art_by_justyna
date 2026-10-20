@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
         positionX = Math.min(Math.max(positionX, 0), maxX);
         positionY = Math.min(Math.max(positionY, 0), maxY);
 
-        zoomLensElement.style.left = `${positionX}px`;
-        zoomLensElement.style.top = `${positionY}px`;
+        zoomLensElement.style.left = `${modalImageElement.offsetLeft + positionX}px`;
+        zoomLensElement.style.top = `${modalImageElement.offsetTop + positionY}px`;
         zoomLensElement.style.backgroundImage = `url(${modalImageElement.src})`;
         zoomLensElement.style.backgroundSize =
             `${modalImageElement.width * zoomFactor}px ${modalImageElement.height * zoomFactor}px`;
